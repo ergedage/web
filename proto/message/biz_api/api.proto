@@ -1,0 +1,16 @@
+syntax = "proto3";
+package biz;
+
+option go_package = "pb_gen/message";
+
+message ReqOfGetProject {
+  int64 project_id=1;
+}
+
+message RespOfGetProject {
+  string project_name= 1;
+  string url_link=2;
+  string img=3;
+  string project_desc=4;
+}
+

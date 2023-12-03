@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package api;
+option go_package = "pb_gen";
+
+service biz_api_service{
+  rpc GetProject(biz.ReqOfGetProject) returns (biz.ReqOfGetProject) {
+        option (api.post) = "/azhong/company/get_project/v1";
+        option (api.serializer) = "json";
+  }
+}
